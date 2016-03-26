@@ -44,11 +44,14 @@ class EncryptomaniaController {
             String errorMessage
             if (e.getCause() instanceof InvalidKeyException){
                 errorMessage = "InvalidKeyException usually means you have to install the JCE in your JRE, " +
-                        "or use a max keyLength of 128 (which we don't support yet): " + e.getMessage()
+                        "or use a max keyLength of 128 (which we don't support yet): " + e.message
             } else {
-                errorMessage = e.getMessage()
+                errorMessage = e.message
             }
             showErrorMessage(errorMessage)
+            throw e
+        } catch (Exception e){
+            showErrorMessage("Unexpected error: $e.message")
             throw e
         }
     }

@@ -1,7 +1,7 @@
 Encryptomania
 -------------
 
-This is a desktop tool for playing around with encryption.
+This is a desktop tool for playing around with symmetric encryption.
 
 In its first instance, the goal is to offer a GUI for trying out the
 [Spring project's crypto utilities](http://docs.spring.io/spring-security/site/docs/current/reference/html/crypto.html#spring-security-crypto-encryption)
@@ -11,10 +11,10 @@ In its first instance, the goal is to offer a GUI for trying out the
 
 A Java 7+ runtime patched with the [JCE](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html).
 
-## Download
+## Download and run
 
 See the latest [release](https://github.com/tfnico/encryptomania/releases), or build it yourself following instructions
-further down below.
+further down below. Inside the bin folder you should find a launcher script for your platform.
 
 ## Todos/bugs:
 
@@ -36,3 +36,4 @@ The build will produce a runnable application in various formats, dmg-app for ma
 See the build/distributions directory for built artifacts.
 
 License is Apache 2.0, as described in the LICENSE file.
+
