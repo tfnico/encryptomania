@@ -11,7 +11,6 @@ Spring project's crypto utilities.
 * Always random key, so still no queryable text
 * Can only do one kind of encryption (AES 256 with CBC)
 * Requires JCE to be installed (see https://github.com/spring-projects/spring-security/issues/2917)
-* Does not show error messages at all (you have to check console output)
 * No 'generate salt' button yet
 
 This project is based on the lazybones griffon-swing-groovy template, as
