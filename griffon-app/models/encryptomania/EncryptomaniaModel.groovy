@@ -6,5 +6,17 @@ import griffon.metadata.ArtifactProviderFor
 
 @ArtifactProviderFor(GriffonModel)
 class EncryptomaniaModel {
-    @Observable int clickCount = 0
+
+    @Observable String password = 'secret'
+    @Observable String salt = '5c0744940b5c369b'
+    // queryable?
+    //cipher?
+    //ivAlg?
+    //keylength?
+
+    @Observable String encrypted
+    @Observable String decrypted
+
+
+
 }

@@ -55,6 +55,8 @@ apply plugin: 'com.github.ben-manes.versions'
 apply plugin: 'com.github.kt3k.coveralls'
 
 dependencies {
+
+    compile 'org.springframework.security:spring-security-crypto:4.0.4.RELEASE'
     compile "org.codehaus.griffon:griffon-guice:${griffon.version}"
 
     runtime('log4j:log4j:1.2.17') {

@@ -2,6 +2,7 @@ package encryptomania
 
 import griffon.core.test.GriffonFestRule
 import org.fest.swing.fixture.FrameFixture
+import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 
@@ -18,6 +19,7 @@ class EncryptomaniaIntegrationTest {
     private FrameFixture window
 
     @Test
+    @Ignore
     void clickButton() {
         // given:
         window.label('clickLabel').requireText('0')
