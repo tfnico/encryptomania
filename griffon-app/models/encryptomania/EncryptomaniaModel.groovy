@@ -9,7 +9,7 @@ class EncryptomaniaModel {
 
     @Observable String password = 'secret'
     @Observable String salt = '5c0744940b5c369b'
-    // queryable?
+    Boolean queryable = false
     //cipher?
     //ivAlg?
     //keylength?

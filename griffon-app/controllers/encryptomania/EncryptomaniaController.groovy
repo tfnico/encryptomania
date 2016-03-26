@@ -23,11 +23,17 @@ class EncryptomaniaController {
     EncryptomaniaModel model
 
     void encrypt() {
-        model.encrypted = convert { Encryptors.text(model.password, model.salt).encrypt(model.decrypted) }
+        //TODO: Use the EncryptorBuilder if it ever gets merged.
+        model.encrypted = model.queryable ?
+                convert { Encryptors.queryableText(model.password, model.salt).encrypt(model.decrypted) } :
+                convert { Encryptors.text(model.password, model.salt).encrypt(model.decrypted) }
     }
 
     void decrypt() {
-        model.decrypted = convert { Encryptors.text(model.password, model.salt).decrypt(model.encrypted) }
+        model.decrypted = model.queryable ?
+                convert { Encryptors.queryableText(model.password, model.salt).decrypt(model.encrypted) } :
+                convert { Encryptors.text(model.password, model.salt).decrypt(model.encrypted) }
+
     }
 
     private String convert(Closure encryptionClosure) {

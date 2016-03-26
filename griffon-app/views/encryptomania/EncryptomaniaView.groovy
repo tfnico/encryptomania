@@ -25,14 +25,21 @@ class EncryptomaniaView {
                              imageIcon('/griffon-icon-16x16.png').image]) {
 
                 panel(border: emptyBorder(6)){
-                    gridLayout(rows: 2, cols: 4)
+                    gridLayout(rows: 2, cols: 6)
+                    //1st row:
                     label(id: 'passwordLabel', text: 'Password')
                     textField(editable: true, text: bind ('password', source: model, mutual: true))
                     label(id: 'saltLabel', text: 'Salt')
                     textField(editable: true, text: bind ('salt', source: model, mutual: true))
+                    label(id: 'queryableLabel', text: 'Queryable')
+                    checkBox(selected: bind ('queryable', target: model))
+
+                    //2nd row:
                     textField(editable: true, text: bind ('decrypted',target: model, mutual: true))
+                    label(id: 'rightLabel', text: '->')
                     button(id: 'encryptButton', encryptAction)
                     button(id: 'decryptButton', decryptAction)
+                    label(id: 'leftLabel', text: '<-')
                     textField(editable: true, text: bind ('encrypted',target: model, mutual: true))
 
                 }
