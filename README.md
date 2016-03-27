@@ -3,6 +3,8 @@ Encryptomania
 
 This is a desktop tool for playing around with symmetric encryption.
 
+![screenshot](http://i.imgur.com/gwIjJ7d.png)
+
 In its first instance, the goal is to offer a GUI for trying out the
 [Spring project's crypto utilities](http://docs.spring.io/spring-security/site/docs/current/reference/html/crypto.html#spring-security-crypto-encryption)
 , in particular for text values.
